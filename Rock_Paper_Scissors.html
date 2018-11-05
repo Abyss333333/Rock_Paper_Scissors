@@ -1,0 +1,62 @@
+<!Doctype html>
+
+<head></head>
+
+<body>
+    <script>
+
+        function computerplay(){
+            var myArray =["Rock", "Paper", "Scissors"];
+            return myArray[(Math.floor(Math.random()*myArray.length))];
+        }
+
+        function round (player_selection, computer_selection){
+            let x = player_selection.toLowerCase();
+            let y = computer_selection.toLowerCase();
+
+            if (x===y ){
+                return ("tie");
+            }
+
+            else if( (x === "rock" && y==="scissors") || (x === "scissors" && y==="paper") || (x === "paper" && y==="rock") ){
+                return (x + " beats "+ y +". Player wins");
+            }
+
+            else if( (y === "rock" && x==="scissors") || (y === "scissors" && x==="paper") || (y === "paper" && x==="rock") ){
+                return (y +" beats " + x + ". Computer Wins");
+            }
+
+        }
+
+        function game (){
+            let x= 0;
+            let y= 0;
+
+            
+
+            while (x< 3 && y<3){
+                let input = prompt ("Rock, Paper or Scissors");
+                let input2 = computerplay();
+                let output = round (input, input2);
+                if (output.search("Player wins")!== -1){
+                    x+=1;
+                    console.log(output + ". Score is Player " + x + " and Computer " + y);
+                }
+                else if (output.search("Computer Wins")!== -1){
+                    y+=1;
+                    console.log(output + ". Score is Player " + x + " and Computer " + y);
+                }
+                else{
+                    console.log(output);
+                }
+            }
+
+            console.log ("Game Over");
+
+            return;
+
+        }
+    
+    
+    </script>
+</body>
