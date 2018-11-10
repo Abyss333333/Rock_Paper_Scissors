@@ -1,0 +1,19 @@
+body{
+    position:relative;
+    top:140px;
+    left:500px;
+    background-image: url("http://www.toca-ch.com/data/walls/125/25825650.jpg");
+    color: snow;
+    font-weight: bold;
+}
+
+button{
+    padding:10px;
+    background: whitesmoke;
+    border-style:inset;
+}
+
+.Selections{
+    margin-top: 10px;
+    
+}
